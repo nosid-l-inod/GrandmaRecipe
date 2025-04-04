@@ -1,17 +1,14 @@
 # Pulling
 git checkout -b your-feature-branch
-
 1. git checkout main
 2. git pull origin main
 3. git checkout your-feature-branch
 4. git merge main
 
-
 # Push
 1. git add .
 2. git commit -m "Your descriptive commit message"
 3. git push origin your-feature-branch
-
 
 
 # GrandmaRecipe
