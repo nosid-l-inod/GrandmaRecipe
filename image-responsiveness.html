@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock image responsiveness</title>
+</head>
+<body>
+
+    <!-- Generated code -->
+    <!-- Copilot -->
+    <a href="https://example.com">
+        <img id="responsiveImage" src="" alt="Responsive Image">
+      </a>
+      
+      <script>
+        function updateImage() {
+          var img = document.getElementById('responsiveImage');
+          var width = window.innerWidth;
+      
+          if (width >= 800) {
+            img.src = 'image-large.jpg';
+          } else if (width >= 500) {
+            img.src = 'image-medium.jpg';
+          } else {
+            img.src = 'image-small.jpg';
+          }
+        }
+      
+        window.addEventListener('resize', updateImage);
+        window.addEventListener('load', updateImage);
+      </script>
+      
+</body>
+</html>

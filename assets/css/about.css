@@ -1,0 +1,386 @@
+/* about.css */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+dl, ul, ol {
+    list-style: none;
+}
+
+
+/* Header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 5rem;
+    padding: 0 4rem;
+}
+
+#header h1 {
+    color: black;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+#header .navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+#menu-toggle {
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    display: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    #header {
+        padding: 0 3rem;
+    }
+    
+    #header h1 {
+        color: black;
+        font-size: 1.4rem;
+    }
+    
+    #header .navbar-links {
+        display: none;
+    }
+    
+    #menu-toggle {
+        font-size: 0.9rem;
+        display: block;
+    }
+}
+
+/* Header responsiveness */
+/* Medium devices */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    #header {
+        padding: 0 3rem;
+    }
+    
+    #header h1 {
+        color: black;
+        font-size: 1.4rem;
+    }
+    
+    #header .navbar-links {
+        display: none;
+    }
+    
+    #menu-toggle {
+        font-size: 0.9rem;
+        display: block;
+    }
+}
+
+
+/* Main */
+#main {
+    margin-bottom: 4rem;
+}
+
+.recipes {
+    padding: 0 4rem;
+    padding-top: 5rem;
+}
+
+.recipes .title {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.recipes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    box-sizing: border-box;
+}
+
+.recipe-card {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.recipe-card img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+    height: 500px;
+}
+
+.recipe-info {
+    width: 100%;
+    padding: 0.5rem 0 1rem 0.5rem;
+}
+
+.recipe-info h2 {
+    color: rgb(122, 122, 122);
+    margin-bottom: 0.5rem;
+}
+
+.recipe-info p {
+    font-size: 1.1rem;
+}
+
+/* Main Responsiveness */
+/* Small devices */
+@media screen and (max-width: 480px) {
+    #main {
+        margin-bottom: 4rem;
+    }
+    
+    .recipes {
+        padding: 0 4rem;
+        padding-top: 2rem;
+    }
+    
+    .recipes .title {
+        font-size: 2rem;
+    }
+    
+    .recipes-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4rem;
+        box-sizing: border-box;
+    }
+    
+    .recipe-card {
+        height: 400px;
+        display: flex;
+
+        position: relative;
+    }
+    
+    .recipe-card img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        flex-shrink: 0;
+        object-position: top;
+    }
+    
+    .recipe-info {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(120, 120, 120, 0.3);
+        backdrop-filter: blur(1rem);
+        text-align: center;
+    }
+    
+    .recipe-info h2 {
+        margin-bottom: 0.5rem;
+        text-transform: capitalize;
+        color: whitesmoke;
+    }
+    
+    .recipe-info p {
+        font-size: 1.1rem;
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    #main {
+        margin-bottom: 4rem;
+    }
+    
+    .recipes {
+        padding: 0 4rem;
+        padding-top: 2rem;
+    }
+    
+    .recipes .title {
+        font-size: 2rem;
+    }
+    
+    .recipes-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        box-sizing: border-box;
+    }
+    
+    .recipe-card {
+        height: 400px;
+        display: flex;
+
+        position: relative;
+    }
+    
+    .recipe-card img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        flex-shrink: 0;
+        object-position: top;
+    }
+    
+    .recipe-info {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(120, 120, 120, 0.3);
+        backdrop-filter: blur(1rem);
+        text-align: center;
+    }
+    
+    .recipe-info h2 {
+        margin-bottom: 0.5rem;
+        text-transform: capitalize;
+        color: whitesmoke;
+    }
+    
+    .recipe-info p {
+        font-size: 1.1rem;
+        display: none;
+    }
+}
+
+
+/* Footer */
+#footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    background-color: var(--primary);
+    flex-direction: column;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.footer-media {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-media a {
+    margin-right: 0.5rem;
+}
+
+.footer-media i {
+    font-size: 1.4rem;
+}
+
+.bottom-nav ul {
+    display: flex;
+    gap: 1rem;
+    font-size: var(--font);
+    list-style: none;
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: var(--font);
+}
+
+#footer .social-media {
+    display: flex;
+    gap: 2rem;
+    align-items: end;
+}
+
+.social-media ul {
+    display: flex ;
+    gap: 1rem;
+    color: var(--color);
+    font-size: var(--font);
+}
+
+
+/* Footer respinsiveness */
+@media screen and (max-width: 480px) {
+
+    #footer {
+        padding: 2rem 2rem;
+        flex-direction: column;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-media {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-media i {
+        font-size: 1.2rem;
+    }
+
+    .bottom-nav {
+        margin-bottom: 1rem;
+    }
+
+    .bottom-nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+}  
+
+/* Medium devices */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    #footer {
+        padding: 2rem 2rem;
+        flex-direction: column;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-media {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-media i {
+        font-size: 1.2rem;
+    }
+
+    .bottom-nav {
+        margin-bottom: 1rem;
+    }
+
+    .bottom-nav ul {
+        display: flex;
+        gap: 2rem;
+    }
+}
